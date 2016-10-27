@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYi-wt-m5v">
+                                <color key="backgroundColor" white="1" alpha="0.7528664172535211" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Scan me">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sW-WW-Nrt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-JB-BSg">
+                                <color key="backgroundColor" white="1" alpha="0.7528664172535211" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="N5F-Br-6RI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-DM-qHg">
+                                <color key="backgroundColor" white="1" alpha="0.75286641730000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sG1-Oq-srk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-yq-Yfh">
+                                <color key="backgroundColor" white="1" alpha="0.75286641730000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Open URL">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZRt-rY-Bcr"/>
+                                    <segue destination="j58-1q-sqf" kind="show" identifier="passData" id="ekj-Zw-Cxk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xYi-wt-m5v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="2NX-Ng-eoP"/>
+                            <constraint firstAttribute="trailing" secondItem="X2c-yq-Yfh" secondAttribute="trailing" constant="8" id="31w-8z-cyH"/>
+                            <constraint firstAttribute="trailing" secondItem="Nft-DM-qHg" secondAttribute="trailing" constant="8" id="9Yx-zH-n5i"/>
+                            <constraint firstItem="Nft-DM-qHg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="9tw-sx-CIF"/>
+                            <constraint firstItem="jzC-JB-BSg" firstAttribute="top" secondItem="X2c-yq-Yfh" secondAttribute="bottom" constant="20" id="A2o-Y1-QBt"/>
+                            <constraint firstItem="X2c-yq-Yfh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="FaS-7a-gs7"/>
+                            <constraint firstItem="jzC-JB-BSg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="U5W-TG-yAC"/>
+                            <constraint firstItem="Nft-DM-qHg" firstAttribute="top" secondItem="jzC-JB-BSg" secondAttribute="bottom" constant="18" id="bbz-Q0-aLA"/>
+                            <constraint firstAttribute="trailing" secondItem="xYi-wt-m5v" secondAttribute="trailing" constant="8" id="i1g-s2-zrB"/>
+                            <constraint firstAttribute="trailing" secondItem="jzC-JB-BSg" secondAttribute="trailing" constant="8" id="tWn-Aa-CBn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jzC-JB-BSg" secondAttribute="bottom" constant="137" id="xBh-Qx-Jhz"/>
+                            <constraint firstItem="xYi-wt-m5v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="xh9-UW-Goh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="Nft-DM-qHg" id="Crs-BK-c6l"/>
+                        <outlet property="openURL" destination="X2c-yq-Yfh" id="KTu-B4-bdf"/>
+                        <outlet property="qLabel" destination="jzC-JB-BSg" id="tgp-tl-b0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="cbJ-8I-3ce">
+            <objects>
+                <viewController id="j58-1q-sqf" customClass="WebViewController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mlc-GC-Gcz"/>
+                        <viewControllerLayoutGuide type="bottom" id="k84-FJ-5Oj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wcI-Mr-rnN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-sv-fSz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ybV-gr-tGy"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="eBZ-vq-fsW">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="wZJ-H6-Tju">
+                                            <connections>
+                                                <action selector="goBack:" destination="j58-1q-sqf" id="9pw-hx-jx1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGE-5O-rjC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Dce-hO-LmO"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="9Jb-bZ-Olo">
+                                        <connections>
+                                            <action selector="stopLoading" destination="NGu-kr-mai" id="cVV-dV-Jku"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="refresh" id="qih-HE-jN2">
+                                        <connections>
+                                            <action selector="reload" destination="NGu-kr-mai" id="x60-nq-kir"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uYG-9W-xmI"/>
+                                    <barButtonItem systemItem="rewind" id="q4l-vV-RdM">
+                                        <connections>
+                                            <action selector="goBack" destination="NGu-kr-mai" id="ovZ-ak-tiC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="L63-J4-Bs6">
+                                        <connections>
+                                            <action selector="goForward" destination="NGu-kr-mai" id="Lid-e6-807"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGu-kr-mai">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dHi-sv-fSz" firstAttribute="leading" secondItem="wcI-Mr-rnN" secondAttribute="leading" id="8gD-Ba-t7A"/>
+                            <constraint firstAttribute="trailing" secondItem="uGE-5O-rjC" secondAttribute="trailing" id="In6-f1-ho4"/>
+                            <constraint firstItem="dHi-sv-fSz" firstAttribute="top" secondItem="wcI-Mr-rnN" secondAttribute="top" id="KIP-AL-xD4"/>
+                            <constraint firstItem="uGE-5O-rjC" firstAttribute="leading" secondItem="wcI-Mr-rnN" secondAttribute="leading" id="PDp-Ic-bQx"/>
+                            <constraint firstItem="NGu-kr-mai" firstAttribute="leading" secondItem="wcI-Mr-rnN" secondAttribute="leading" id="Pj7-Rn-WVu"/>
+                            <constraint firstAttribute="trailing" secondItem="dHi-sv-fSz" secondAttribute="trailing" id="aeG-Qf-xws"/>
+                            <constraint firstAttribute="trailing" secondItem="NGu-kr-mai" secondAttribute="trailing" id="b0Z-9d-KI7"/>
+                            <constraint firstItem="NGu-kr-mai" firstAttribute="top" secondItem="dHi-sv-fSz" secondAttribute="bottom" id="lcQ-KW-w8f"/>
+                            <constraint firstItem="k84-FJ-5Oj" firstAttribute="top" secondItem="uGE-5O-rjC" secondAttribute="bottom" id="sph-VC-raL"/>
+                            <constraint firstItem="uGE-5O-rjC" firstAttribute="top" secondItem="NGu-kr-mai" secondAttribute="bottom" id="uQl-Y2-isv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="NGu-kr-mai" id="JZ8-rE-viH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hf-MP-cvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935.20000000000005" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>
