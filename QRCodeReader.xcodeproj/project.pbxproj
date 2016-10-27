@@ -13,7 +13,7 @@
 		849B768F1DC1DAB8001AAEB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B768E1DC1DAB8001AAEB9 /* Assets.xcassets */; };
 		849B76921DC1DAB8001AAEB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B76901DC1DAB8001AAEB9 /* LaunchScreen.storyboard */; };
 		849B769B1DC1DE92001AAEB9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B769A1DC1DE92001AAEB9 /* AVFoundation.framework */; };
-		849B769D1DC1F980001AAEB9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B769C1DC1F980001AAEB9 /* WebViewController.swift */; };
+		849B76A21DC2080C001AAEB9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B76A11DC2080C001AAEB9 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,8 @@
 		849B76911DC1DAB8001AAEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849B76931DC1DAB8001AAEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B769A1DC1DE92001AAEB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		849B769C1DC1F980001AAEB9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../WebViewController.swift; sourceTree = "<group>"; };
+		849B769E1DC207F2001AAEB9 /* QRCodeReader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = QRCodeReader.xcodeproj; sourceTree = SOURCE_ROOT; };
+		849B76A11DC2080C001AAEB9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +61,11 @@
 		849B76861DC1DAB8001AAEB9 /* QRCodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				849B769E1DC207F2001AAEB9 /* QRCodeReader.xcodeproj */,
 				849B76871DC1DAB8001AAEB9 /* AppDelegate.swift */,
 				849B76891DC1DAB8001AAEB9 /* ViewController.swift */,
-				849B769C1DC1F980001AAEB9 /* WebViewController.swift */,
 				849B768B1DC1DAB8001AAEB9 /* Main.storyboard */,
+				849B76A11DC2080C001AAEB9 /* WebViewController.swift */,
 				849B768E1DC1DAB8001AAEB9 /* Assets.xcassets */,
 				849B76901DC1DAB8001AAEB9 /* LaunchScreen.storyboard */,
 				849B76931DC1DAB8001AAEB9 /* Info.plist */,
@@ -77,6 +79,11 @@
 				849B769A1DC1DE92001AAEB9 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849B769F1DC207F2001AAEB9 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +134,12 @@
 			mainGroup = 849B767B1DC1DAB7001AAEB9;
 			productRefGroup = 849B76851DC1DAB8001AAEB9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 849B769F1DC207F2001AAEB9 /* Products */;
+					ProjectRef = 849B769E1DC207F2001AAEB9 /* QRCodeReader.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				849B76831DC1DAB7001AAEB9 /* QRCodeReader */,
@@ -153,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				849B768A1DC1DAB8001AAEB9 /* ViewController.swift in Sources */,
-				849B769D1DC1F980001AAEB9 /* WebViewController.swift in Sources */,
 				849B76881DC1DAB8001AAEB9 /* AppDelegate.swift in Sources */,
+				849B76A21DC2080C001AAEB9 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +331,7 @@
 				849B76981DC1DAB8001AAEB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
